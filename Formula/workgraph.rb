@@ -1,6 +1,7 @@
 class Workgraph < Formula
   desc "Local-first substrate for personal work intelligence"
   homepage "https://workgraph.pages.dev"
+  version "0.3.8"
 
   on_macos do
     if Hardware::CPU.arm?
