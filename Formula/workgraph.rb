@@ -4,21 +4,21 @@ class Workgraph < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jystringfellow/workgraph/releases/download/v0.4.8/workgraph_0.4.8_darwin_arm64.tar.gz"
-      sha256 "96a06d615de9f6825f4a34b3972df90a4a532e4f9924e2a245593ff328e7a82e"
+      url "https://github.com/jystringfellow/workgraph/releases/download/v0.4.9/workgraph_0.4.9_darwin_arm64.tar.gz"
+      sha256 "de36e3203327cb361c18bff22ea80e56bb998815cc1f6afff16a1d813e92353e"
     else
-      url "https://github.com/jystringfellow/workgraph/releases/download/v0.4.8/workgraph_0.4.8_darwin_amd64.tar.gz"
-      sha256 "6da1a3dfcb559d2d55989a00efae50c6dfa0ccbcf084be998de337d78c4f536d"
+      url "https://github.com/jystringfellow/workgraph/releases/download/v0.4.9/workgraph_0.4.9_darwin_amd64.tar.gz"
+      sha256 "a0291b489e04344579ba693ffdca533aed765c339d98d248df2acb10d6f5cc7f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/jystringfellow/workgraph/releases/download/v0.4.8/workgraph_0.4.8_linux_arm64.tar.gz"
-      sha256 "6a06608e80e272e847cdb32f69aae7c7d0e20e733db103a53b214a18f5698337"
+      url "https://github.com/jystringfellow/workgraph/releases/download/v0.4.9/workgraph_0.4.9_linux_arm64.tar.gz"
+      sha256 "9f7df7b7413a1e7d39998ec9f424bb23f04b0af4d49dd59829f58a127cbcb886"
     else
-      url "https://github.com/jystringfellow/workgraph/releases/download/v0.4.8/workgraph_0.4.8_linux_amd64.tar.gz"
-      sha256 "c556227b616f357a4f17f5d1e3c41175cdcce410e944502f826bebf66ea68319"
+      url "https://github.com/jystringfellow/workgraph/releases/download/v0.4.9/workgraph_0.4.9_linux_amd64.tar.gz"
+      sha256 "921b0864358cbbe13de1914908a98ae9140456243a6f11400ce7ede0ba0b2a21"
     end
   end
 
