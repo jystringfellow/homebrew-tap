@@ -1,0 +1,50 @@
+name: Update scoring-stage and kapellmeister
+
+on:
+  schedule:
+    - cron: 17 * * * *
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: update-agent-tools
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash -euo pipefail {0}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Update formulae from each project's newest release
+        id: update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          .github/scripts/update-release-formula.sh scoring-stage jystringfellow/scoring-stage stage
+          .github/scripts/update-release-formula.sh kapellmeister jystringfellow/kapellmeister km
+
+      - name: Commit
+        run: |
+          if [[ -z "$(git status --porcelain -- Formula)" ]]; then
+            echo "Formulae are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for formula in scoring-stage kapellmeister; do
+            file="Formula/${formula}.rb"
+            if [[ -n "$(git status --porcelain -- "$file")" ]]; then
+              version="$(sed -n 's|.*/releases/download/v\([^/]*\)/.*|\1|p' "$file" | head -1)"
+              git add "$file"
+              git commit -m "${formula} ${version}"
+            fi
+          done
+          git push origin HEAD:main
