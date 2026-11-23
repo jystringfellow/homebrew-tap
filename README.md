@@ -13,6 +13,16 @@ tap "jystringfellow/tap"
 brew "<formula>"
 ```
 
+## Formulae
+
+| Formula | Installs | Updated by |
+| --- | --- | --- |
+| `workgraph` | `workgraph` | its own release workflow |
+| `scoring-stage` | `stage` | its own release workflow |
+| `kapellmeister` | `km` | its own release workflow |
+
+Each project's release workflow commits its formula here when a version tag is pushed.
+
 ## Documentation
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
