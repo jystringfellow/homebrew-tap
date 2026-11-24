@@ -5,21 +5,21 @@ class ScoringStage < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jystringfellow/scoring-stage/releases/download/v0.0.1-rc.5/stage_v0.0.1-rc.5_darwin_arm64.tar.gz"
-      sha256 "2387b7b74c3a8f0c45b39a287078e9c22899c2313969df3d09ea44c2559caeed"
+      url "https://github.com/jystringfellow/scoring-stage/releases/download/v0.0.1-rc.6/stage_v0.0.1-rc.6_darwin_arm64.tar.gz"
+      sha256 "a4df544154619091d40fc293eb4e6cd6754f43eec74539193c2124880baaea68"
     else
-      url "https://github.com/jystringfellow/scoring-stage/releases/download/v0.0.1-rc.5/stage_v0.0.1-rc.5_darwin_amd64.tar.gz"
-      sha256 "d2cf49f9816d027549190fe6ecda199b755fd43a26ac8400566f8fbeeb8ce5a2"
+      url "https://github.com/jystringfellow/scoring-stage/releases/download/v0.0.1-rc.6/stage_v0.0.1-rc.6_darwin_amd64.tar.gz"
+      sha256 "10b76052ebd3bf8021f85ea671027a6be8f6bb7eaded7ba367e4c3f62a99a82d"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/jystringfellow/scoring-stage/releases/download/v0.0.1-rc.5/stage_v0.0.1-rc.5_linux_arm64.tar.gz"
-      sha256 "d6c696616e6d3eba0fa0fc9d79b00ac570c94979fb8fc200bc11b730bdf51f28"
+      url "https://github.com/jystringfellow/scoring-stage/releases/download/v0.0.1-rc.6/stage_v0.0.1-rc.6_linux_arm64.tar.gz"
+      sha256 "019886e1daa7d46ecbca6a39e1174e2dd250df2f5952ecb291c38ee09106c84f"
     else
-      url "https://github.com/jystringfellow/scoring-stage/releases/download/v0.0.1-rc.5/stage_v0.0.1-rc.5_linux_amd64.tar.gz"
-      sha256 "ddde47f5f1a6ea2ff1b601fac2f60da76e5f4335975144984e398a8238d7a0e1"
+      url "https://github.com/jystringfellow/scoring-stage/releases/download/v0.0.1-rc.6/stage_v0.0.1-rc.6_linux_amd64.tar.gz"
+      sha256 "2f9e6eed7690b58a5017be808cb54523913364748e3ea4443635a83c0d767fc4"
     end
   end
 
