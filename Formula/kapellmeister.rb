@@ -5,21 +5,21 @@ class Kapellmeister < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jystringfellow/kapellmeister/releases/download/v0.0.1-rc.8/km_v0.0.1-rc.8_darwin_arm64.tar.gz"
-      sha256 "0749fb9e37c4d5574183e8a660639476d91b96515fd03c612302dc382bdc3ac7"
+      url "https://github.com/jystringfellow/kapellmeister/releases/download/v0.0.1-rc.9/km_v0.0.1-rc.9_darwin_arm64.tar.gz"
+      sha256 "a0e687544422c5006039e4654091d94b414b08539d39b84a9ae036938fb98488"
     else
-      url "https://github.com/jystringfellow/kapellmeister/releases/download/v0.0.1-rc.8/km_v0.0.1-rc.8_darwin_amd64.tar.gz"
-      sha256 "dd1c88f31662386b2d07a097f4c61bcd4d210d2d851de48803474278edbaaae7"
+      url "https://github.com/jystringfellow/kapellmeister/releases/download/v0.0.1-rc.9/km_v0.0.1-rc.9_darwin_amd64.tar.gz"
+      sha256 "f291d8ef78b3a50d9ecc0401296268564c08d3fad174e7121ea0b40ca4329050"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/jystringfellow/kapellmeister/releases/download/v0.0.1-rc.8/km_v0.0.1-rc.8_linux_arm64.tar.gz"
-      sha256 "d2929e95568f78384d0a8d2fed0cc5ee3068ec4fa50e5e52506436ac59b09c25"
+      url "https://github.com/jystringfellow/kapellmeister/releases/download/v0.0.1-rc.9/km_v0.0.1-rc.9_linux_arm64.tar.gz"
+      sha256 "1b38a080b786b33fe75ffa714884231cde15d1fbe388c807f411c3e9795a10cb"
     else
-      url "https://github.com/jystringfellow/kapellmeister/releases/download/v0.0.1-rc.8/km_v0.0.1-rc.8_linux_amd64.tar.gz"
-      sha256 "4d6b7bb00315ecc8f285838070de2d595251cd8e00b0a088b7384ef7320e2846"
+      url "https://github.com/jystringfellow/kapellmeister/releases/download/v0.0.1-rc.9/km_v0.0.1-rc.9_linux_amd64.tar.gz"
+      sha256 "e47b2b6b8f491d3507b0868e521697782266a3a4f1792acd5bd14206eb2238c5"
     end
   end
 
